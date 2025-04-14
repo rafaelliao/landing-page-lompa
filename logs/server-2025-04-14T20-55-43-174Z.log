@@ -1,0 +1,25 @@
+[2025-04-14T20:55:43.433Z] [STDOUT] > nextjs-shadcn@0.1.0 dev
+> npm run dev:stable
+[2025-04-14T20:55:43.881Z] [STDOUT] > nextjs-shadcn@0.1.0 dev:stable
+> next dev
+[2025-04-14T20:55:44.665Z] [STDOUT] [1m[38;2;173;127;168m▲ Next.js 14.2.28[39m[22m
+[2025-04-14T20:55:44.666Z] [STDOUT] - Local:        http://localhost:3006
+  - Environments: .env.local, .env
+  - Experiments (use with caution):
+    · turbo
+
+ [32m[1m✓[22m[39m Starting...
+[2025-04-14T20:55:45.300Z] [STDERR] [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T20:55:45.312Z] [STDERR] [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T20:55:45.320Z] [STDERR] [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T20:55:45.553Z] [STDERR] [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T20:55:45.624Z] [STDOUT] [32m[1m✓[22m[39m Ready in 1067ms
+[2025-04-14T20:55:45.631Z] [STDERR] [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T20:55:45.650Z] [STDERR] [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T20:55:51.488Z] [STDOUT] [37m[1m○[22m[39m Compiling / ...
+[2025-04-14T20:55:53.343Z] [STDERR] [IdleFileCachePlugin] Spend 2.358s in build and 0s in average in cache store. This is considered as large change and cache will be persisted in 1s.
+[2025-04-14T20:55:54.905Z] [STDOUT] [32m[1m✓[22m[39m Compiled / in 3.9s (1313 modules)
+[2025-04-14T20:55:54.906Z] [STDERR] [IdleFileCachePlugin] Spend 1.56s in build and 0.064s in average in cache store. This is considered as large change and cache will be persisted in 1s.
+[2025-04-14T20:55:55.266Z] [STDOUT] GET / [32m200[39m in 4290ms
+[2025-04-14T20:55:55.340Z] [STDOUT] [32m[1m✓[22m[39m Compiled in 327ms (661 modules)
+[2025-04-14T20:55:55.341Z] [STDERR] [IdleFileCachePlugin] Spend 1.731s in build and 0.064s in average in cache store. This is considered as large change and cache will be persisted in 1s.

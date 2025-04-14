@@ -1,24 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lompa",
-  description: "Lompa - Sua plataforma de delivery",
+  title: "Lompa - O marketplace mais inovador do Brasil | Delivery Social e Interativo | Teste",
+  description: "O marketplace mais social, acessível e interativo!",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
-        {children}
-      </body>
+      <body className={nunito.className}>{children}</body>
     </html>
   );
 }

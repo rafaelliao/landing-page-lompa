@@ -1,0 +1,97 @@
+[2025-04-14T21:01:09.415Z] > nextjs-shadcn@0.1.0 dev
+> npm run dev:stable
+[2025-04-14T21:01:09.845Z] > nextjs-shadcn@0.1.0 dev:stable
+> next dev
+[2025-04-14T21:01:10.671Z] ▲ Next.js 14.2.28
+[2025-04-14T21:01:10.671Z] - Local:        http://localhost:3006
+  - Environments: .env.local, .env
+  - Experiments (use with caution):
+    · turbo
+
+ ✓ Starting...
+[2025-04-14T21:01:11.334Z] ERROR: [webpack.cache.PackFileCacheStrategy] No pack exists at C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\cache\webpack\edge-server-development.pack.gz: Error: ENOENT: no such file or directory, stat 'C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\cache\webpack\edge-server-development\index.pack.gz'
+[2025-04-14T21:01:11.337Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] restore cache container: 29.4117 ms
+[2025-04-14T21:01:11.343Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] restore cache container: 43.1928 ms
+[2025-04-14T21:01:11.355Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] restore cache container: 50.8577 ms
+[2025-04-14T21:01:11.356Z] ERROR: [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\app\page.js invalidated because it does no longer exist
+[2025-04-14T21:01:11.357Z] ERROR: [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\webpack-runtime.js invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\clsx.js invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\@swc.js invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\motion-utils.js invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\motion-dom.js invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\framer-motion.js invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\react-icons.js invalidated because it does no longer exist
+[2025-04-14T21:01:11.358Z] ERROR: [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\next.js invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\tailwind-merge.js invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\app invalidated because it does no longer exist
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks invalidated because it does no longer exist
+[2025-04-14T21:01:11.358Z] ERROR: [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\app\page.js invalidated because hashes differ (null != 130ccd3ed7323ec4)
+    [webpack.cache.PackFileCacheStrategy] Restored pack from C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\cache\webpack\server-development.pack.gz, but build dependencies have changed.
+    [webpack.cache.PackFileCacheStrategy] resolving of build dependencies is invalid, will re-resolve build dependencies
+[2025-04-14T21:01:11.361Z] ERROR: [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\clsx.js invalidated because hashes differ (null != 6539ca8e67176d1a)
+[2025-04-14T21:01:11.361Z] ERROR: [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\@swc.js invalidated because hashes differ (null != 1668c0615b3a9335)
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\webpack-runtime.js invalidated because hashes differ (null != 14e7f6240822fbb4)
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\motion-dom.js invalidated because hashes differ (null != 4e180a85723c04a7)
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\motion-utils.js invalidated because hashes differ (null != 092eef76b5ceed6e)
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\framer-motion.js invalidated because hashes differ (null != afcda5cdd1eed21f)
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\react-icons.js invalidated because hashes differ (null != 0d835ce24c0cff50)
+[2025-04-14T21:01:11.362Z] ERROR: [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server invalidated because hashes differ (null != directory)
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\tailwind-merge.js invalidated because hashes differ (null != ada115503b27fa78)
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks\next.js invalidated because hashes differ (null != cd9619aca072a19d)
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\app invalidated because hashes differ (null != directory)
+    [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\server\vendor-chunks invalidated because hashes differ (null != directory)
+[2025-04-14T21:01:11.368Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] check build dependencies: 24.8052 ms
+[2025-04-14T21:01:11.368Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] restore cache content metadata: 0.3391 ms
+    [webpack.cache.PackFileCacheStrategy] starting to restore cache content 0 (110 KiB) because of request to: CopyFilePlugin|C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\polyfills\polyfill-nomodule.js
+[2025-04-14T21:01:11.376Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] restore cache content 0 (110 KiB): 7.6623 ms
+[2025-04-14T21:01:11.399Z] ERROR: [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T21:01:11.412Z] ERROR: [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T21:01:11.422Z] ERROR: [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T21:01:11.576Z] ERROR: [webpack.cache.PackFileCacheStrategy] Restored pack from C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.next\cache\webpack\server-development.pack.gz, but resolving of build dependencies errored: Error: Can't resolve '../../../../.next/server/app/page' in 'C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\server'.
+[2025-04-14T21:01:11.579Z] ERROR: [webpack.cache.PackFileCacheStrategy] Error: Can't resolve '../../../../.next/server/app/page' in 'C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\server'
+        at finishWithoutResolve (C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:1:192542)
+        at C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:1:193439
+        at C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:1:194068
+        at eval (eval at create (C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:13:28858), <anonymous>:15:1)
+        at C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:1:194068
+        at eval (eval at create (C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:13:28858), <anonymous>:27:1)
+        at C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:1:176872
+        at C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:1:194068
+        at eval (eval at create (C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:13:28858), <anonymous>:15:1)
+        at C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\webpack\bundle5.js:1:194068
+[2025-04-14T21:01:11.579Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] check build dependencies: 224.4172 ms
+[2025-04-14T21:01:11.656Z] ERROR: [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T21:01:11.731Z] ✓ Ready in 1169ms
+[2025-04-14T21:01:11.734Z] ERROR: [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T21:01:11.740Z] ERROR: [IdleFileCachePlugin] Initial cache was generated and cache will be persisted in 5s.
+[2025-04-14T21:01:38.846Z] ○ Compiling /_not-found ...
+[2025-04-14T21:01:39.216Z] ERROR: [IdleFileCachePlugin] Spend 0.871s in build and 0.002s in average in cache store. This is considered as large change and cache will be persisted in 1s.
+[2025-04-14T21:01:40.221Z] ERROR: [webpack.cache.PackFileCacheStrategy] Pack got invalid because of write to: ResolverCachePlugin|normal|default|dependencyType=|esm|path=|C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa|request=|./node_modules/next/dist/client/app-next-dev.js
+[2025-04-14T21:01:40.300Z] ERROR: [IdleFileCachePlugin] Spend 1.082s in build and 0s in average in cache store. This is considered as large change and cache will be persisted in 1s.
+[2025-04-14T21:01:40.610Z] ERROR: [IdleFileCachePlugin] Spend 1.093s in build and 0.002s in average in cache store. This is considered as large change and cache will be persisted in 1s.
+[2025-04-14T21:01:41.499Z] ERROR: [IdleFileCachePlugin] Spend 1.862s in build and 0s in average in cache store. This is considered as large change and cache will be persisted in 1s.
+[2025-04-14T21:01:42.419Z] ✓ Compiled / in 4.1s (1307 modules)
+[2025-04-14T21:01:42.420Z] ERROR: [IdleFileCachePlugin] Spend 1.9s in build and 0.002s in average in cache store. This is considered as large change and cache will be persisted in 1s.
+[2025-04-14T21:01:42.510Z] ERROR: [webpack.cache.PackFileCacheStrategy] Pack got invalid because of write to: ResolverCachePlugin|normal|default|dependencyType=|esm|modules=[|0=|node_modules|]|fallback=|false|exportsFields=[|0=|exports|]|importsFields=[|0=|imports|]|conditionNames=[|0=|node|1=|import|]|descriptionFiles=[|0=|package.json|]|extensions=[|0=|.js|1=|.json|2=|.node|]|enforceExtensions=|false|symlinks=|true|mainFields=[|0=|main|]|mainFiles=[|0=|index|]|roots=[|]|fullySpecified=|true|preferRelative=|false|preferAbsolute=|false|restrictions=[|]|alias=|false|path=|C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa|request=|next-app-loader?name=app%2F_not-found%2Fpage&page=%2F_not-found%2Fpage&appPaths=&pagePath=..%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fcomponents%2Fnot-found-error.js&appDir=C%3A%5CUsers%5Crafae%5COneDrive%5CDesktop%5CRafael%5CDesenvolvimento%5CLandingPage%20Lompa%5Csrc%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5Crafae%5COneDrive%5CDesktop%5CRafael%5CDesenvolvimento%5CLandingPage%20Lompa&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!
+[2025-04-14T21:01:42.694Z] GET / 200 in 376ms
+[2025-04-14T21:01:42.733Z] ERROR: [webpack.cache.PackFileCacheStrategy] Storing pack...
+[2025-04-14T21:01:42.734Z] ERROR: [webpack.cache.PackFileCacheStrategy] Capturing build dependencies... (C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\next.config.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-app-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-font-loader\index.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-flight-css-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-barrel-loader.js)
+[2025-04-14T21:01:43.440Z] ERROR: [webpack.cache.PackFileCacheStrategy] Storing pack...
+[2025-04-14T21:01:43.441Z] ERROR: [webpack.cache.PackFileCacheStrategy] Capturing build dependencies... (C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-client-pages-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\@next\react-refresh-utils\dist\loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-font-loader\index.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\compiled\mini-css-extract-plugin\loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-flight-css-loader.js, C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\node_modules\next\dist\build\webpack\loaders\next-barrel-loader.js)
+[2025-04-14T21:01:43.713Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] resolve build dependencies: 979.7189 ms
+[2025-04-14T21:01:43.722Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] snapshot build dependencies: 8.5863 ms
+    [webpack.cache.PackFileCacheStrategy] Captured build dependencies
+[2025-04-14T21:01:43.731Z] ERROR: [webpack.cache.PackFileCacheStrategy] 4052 fresh items in cache put into pack 0
+[2025-04-14T21:01:44.695Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] resolve build dependencies: 1254.1926 ms
+[2025-04-14T21:01:44.715Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] snapshot build dependencies: 19.4368 ms
+    [webpack.cache.PackFileCacheStrategy] Captured build dependencies
+[2025-04-14T21:01:44.721Z] ERROR: [webpack.cache.PackFileCacheStrategy] 2857 fresh items in cache put into pack 1
+[2025-04-14T21:01:45.411Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] store pack: 1689.5429 ms
+[2025-04-14T21:01:45.412Z] ERROR: [webpack.cache.PackFileCacheStrategy] Stored pack (4052 items, 1 files, 57 MiB)
+[2025-04-14T21:01:45.797Z] ERROR: <t> [webpack.cache.PackFileCacheStrategy] store pack: 1082.1696 ms
+[2025-04-14T21:01:45.797Z] ERROR: [webpack.cache.PackFileCacheStrategy] Stored pack (2858 items, 2 files, 86 MiB)
+[2025-04-14T21:02:27.066Z] GET / 200 in 48ms
+[2025-04-14T21:02:40.708Z] [?25h
+[2025-04-14T21:02:40.709Z] 
+[2025-04-14T21:02:40.985Z] Servidor encerrado com código 0

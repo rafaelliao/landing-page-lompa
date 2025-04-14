@@ -3,6 +3,7 @@
 import { FloatingProducts } from "@/components/floating-products";
 import { CenterCard } from "@/components/center-card";
 import { ReferenceCard } from "@/components/reference-card";
+import { ScrollIndicator } from "@/components/scroll-indicator";
 import Link from "next/link";
 import { FaWhatsapp, FaHeadset, FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
@@ -34,41 +35,57 @@ export default function Home() {
 
   return (
     <main 
-      className="min-h-screen relative"
-      style={{ background: 'linear-gradient(145deg, #160E25 0%, #221931 50%, #46285c 100%)' }}
+      className="min-h-screen relative overflow-x-hidden"
+      style={{ 
+        background: 'linear-gradient(145deg, #160E25 0%, #221931 50%, #46285c 100%)',
+        minHeight: '100vh',
+        width: '100%'
+      }}
     >
+      {/* Teste de ambiente local - Turbo configurado corretamente */}
       {/* Botão do menu móvel */}
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="fixed top-6 left-6 z-50 text-white/90 hover:text-white transition-colors md:hidden"
-      >
-        {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-      </button>
+      <header className="fixed top-0 left-0 right-0 z-50 p-4">
+        <div className="container-fluid px-4 md:px-8 flex justify-between items-center">
+          {/* Menu para Mobile */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white/90 hover:text-white transition-colors"
+            >
+              {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
 
-      {/* Menu móvel */}
-      <div className={`fixed top-0 left-0 h-screen w-64 bg-[#160E25] z-40 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`}>
-        <div className="flex flex-col gap-6 pt-24 px-6">
-          <NavigationLinks />
-        </div>
-      </div>
+          {/* Menu Mobile */}
+          {isMenuOpen && (
+            <div className="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center gap-8 md:hidden">
+              <NavigationLinks />
+            </div>
+          )}
 
-      {/* Links de navegação desktop */}
-      <div className="fixed top-6 right-0 z-50 hidden md:flex gap-6 pr-24">
-        <NavigationLinks />
-      </div>
+          {/* Links de Navegação Desktop */}
+          <div className="flex-1 hidden md:flex justify-end">
+            <nav className="flex items-center gap-6">
+              <NavigationLinks />
+            </nav>
+          </div>
+        </div>
+      </header>
 
-      <div className="relative h-screen w-full">
-        <div className="absolute inset-0 z-10">
-          <CenterCard />
-        </div>
-        <div className="absolute inset-0 z-0">
-          <FloatingProducts />
-        </div>
-      </div>
-      <div className="relative z-30">
-        <div className="h-[200vh]"></div>
-      </div>
-      <ReferenceCard />
+      {/* Primeira seção - altura total da viewport */}
+      <section className="relative min-h-screen">
+        <FloatingProducts />
+        <CenterCard />
+        <ScrollIndicator />
+      </section>
+
+      {/* Segunda seção - para onde a página rola */}
+      <section className="relative min-h-screen bg-opacity-50 flex items-center justify-center">
+        <ReferenceCard />
+      </section>
+
+      {/* Espaço adicional para garantir a rolagem */}
+      <div className="h-screen"></div>
     </main>
   );
 }

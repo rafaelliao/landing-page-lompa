@@ -3,17 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3002 --hostname localhost",
+    "dev": "npm run dev:stable",
+    "dev:stable": "next dev",
+    "dev:log": "node scripts/log-server.js",
+    "dev:check": "node ./scripts/check-env.js && next dev",
+    "dev:clean": "rm -rf .next && next dev",
+    "dev:win": "SET NODE_OPTIONS=--max_old_space_size=4096 --inspect && SET WATCHPACK_POLLING=true && next dev --port 3005",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:env": "node ./scripts/check-env.js"
   },
   "dependencies": {
     "class-variance-authority": "0.7.0",
     "clsx": "2.0.0",
     "framer-motion": "^12.6.5",
     "lucide-react": "0.294.0",
-    "next": "14.0.4",
+    "next": "14.2.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^5.5.0",
