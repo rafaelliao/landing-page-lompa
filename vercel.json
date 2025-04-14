@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "framework": "nextjs",
-  "buildCommand": "cd landing-page-lompa && npm install && npm run build",
-  "devCommand": "cd landing-page-lompa && npm run dev",
-  "installCommand": "cd landing-page-lompa && npm install",
-  "outputDirectory": "landing-page-lompa/.next"
-} 
