@@ -3,16 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run dev:stable",
-    "dev:stable": "next dev",
-    "dev:log": "node scripts/log-server.js",
-    "dev:check": "node ./scripts/check-env.js && next dev",
-    "dev:clean": "rm -rf .next && next dev",
-    "dev:win": "SET NODE_OPTIONS=--max_old_space_size=4096 --inspect && SET WATCHPACK_POLLING=true && next dev --port 3005",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "check:env": "node ./scripts/check-env.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "class-variance-authority": "0.7.0",
