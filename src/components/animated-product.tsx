@@ -22,110 +22,100 @@ export function AnimatedProduct({
 }: AnimatedProductProps) {
   const [scrollY, setScrollY] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const [referenceCardPosition, setReferenceCardPosition] = useState({ x: 0, y: 0 });
+  const productRef = useRef<HTMLDivElement>(null);
+  const referenceCardRef = useRef<DOMRect | null>(null);
   const rotation = React.useMemo(() => Math.random() * 10 - 5, []);
   const height = propHeight || Math.round((width * 4) / 3);
-  const productRef = useRef<HTMLDivElement>(null);
+
+  // Memoize os valores de fade para evitar recálculos
+  const fadeValues = React.useMemo(() => ({
+    start: isMobile ? 200 : 400,
+    end: isMobile ? 300 : 500
+  }), [isMobile]);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // 768px é o breakpoint md do Tailwind
+      setIsMobile(window.innerWidth < 768);
     };
 
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      // Atualiza a posição do card de referência
-      const referenceCard = document.querySelector('.reference-card');
-      if (referenceCard) {
-        const rect = referenceCard.getBoundingClientRect();
-        setReferenceCardPosition({
-          x: rect.left + rect.width / 2,
-          y: rect.top + rect.height / 2
-        });
+      // Atualiza a posição do card de referência apenas quando necessário
+      if (!referenceCardRef.current) {
+        const referenceCard = document.querySelector('.reference-card');
+        if (referenceCard) {
+          referenceCardRef.current = referenceCard.getBoundingClientRect();
+        }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Usar requestAnimationFrame para otimizar o scroll
+    let animationFrameId: number;
+    const optimizedScroll = () => {
+      animationFrameId = requestAnimationFrame(handleScroll);
+    };
+
+    window.addEventListener('scroll', optimizedScroll);
     window.addEventListener('resize', checkMobile);
-    checkMobile(); // Checa inicialmente
-    handleScroll(); // Chama uma vez no início
+    
+    checkMobile();
+    handleScroll();
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('scroll', optimizedScroll);
       window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
-  const getTransform = () => {
-    if (productRef.current) {
-      const progress = Math.min(scrollY / 800, 1);
-      const productRect = productRef.current.getBoundingClientRect();
-      const productCenter = {
-        x: productRect.left + productRect.width / 2,
-        y: productRect.top + productRect.height / 2
-      };
-
-      // Calcula a distância até o centro do card de referência
-      const distanceX = referenceCardPosition.x - productCenter.x;
-      const distanceY = referenceCardPosition.y - productCenter.y;
-
-      // Ajusta o movimento baseado no alinhamento
-      let finalX = distanceX;
-      let finalY = distanceY;
-
-      if (alignSide === "left") {
-        // Elementos da esquerda só se movem para a direita
-        finalX = Math.max(0, distanceX);
-      } else if (alignSide === "right") {
-        // Elementos da direita só se movem para a esquerda
-        finalX = Math.min(0, distanceX);
-      }
-
-      // Valores de fade diferentes para mobile e desktop
-      const fadeStart = isMobile ? 200 : 400; // Mobile: 200px, Desktop: 400px
-      const fadeEnd = isMobile ? 300 : 500;   // Mobile: 300px, Desktop: 500px
-      const fadeProgress = (scrollY - fadeStart) / (fadeEnd - fadeStart);
-      
-      // Efeito de dissolve com flutuação
-      const opacity = scrollY < fadeStart ? 1 : 
-                     scrollY > fadeEnd ? 0 : 
-                     1 - fadeProgress;
-      
-      // Efeito de flutuação suave durante o fade out
-      const floatY = scrollY < fadeStart ? 0 : 
-                    scrollY > fadeEnd ? 20 : 
-                    fadeProgress * 20;
-      
-      // Efeito de blur durante o fade out
-      const blur = scrollY < fadeStart ? 0 : 
-                  scrollY > fadeEnd ? 10 : 
-                  fadeProgress * 10;
-
-      return {
-        x: progress * finalX,
-        y: progress * finalY + floatY,
-        opacity: opacity,
-        filter: `blur(${blur}px)`
-      };
+  const getTransform = React.useCallback(() => {
+    if (!productRef.current || !referenceCardRef.current) {
+      return { x: 0, y: 0, opacity: 1, filter: 'blur(0px)' };
     }
-    return { x: 0, y: 0, opacity: 1, filter: 'blur(0px)' };
-  };
 
-  const commonClasses = cn(
-    "absolute z-10 rounded-[22px] p-[6px] bg-white/20 backdrop-blur-sm shadow-lg",
-    className
-  );
+    const progress = Math.min(scrollY / 800, 1);
+    const productRect = productRef.current.getBoundingClientRect();
+    const productCenter = {
+      x: productRect.left + productRect.width / 2,
+      y: productRect.top + productRect.height / 2
+    };
 
-  const commonStyles = {
-    width: `${width}px`,
-    height: `${height}px`,
-  };
+    const distanceX = referenceCardRef.current.left + referenceCardRef.current.width / 2 - productCenter.x;
+    const distanceY = referenceCardRef.current.top + referenceCardRef.current.height / 2 - productCenter.y;
+
+    let finalX = alignSide === "left" ? Math.max(0, distanceX) : Math.min(0, distanceX);
+    let finalY = distanceY;
+
+    const fadeProgress = (scrollY - fadeValues.start) / (fadeValues.end - fadeValues.start);
+    const opacity = scrollY < fadeValues.start ? 1 : 
+                   scrollY > fadeValues.end ? 0 : 
+                   1 - fadeProgress;
+    
+    const floatY = scrollY < fadeValues.start ? 0 : 
+                  scrollY > fadeValues.end ? 20 : 
+                  fadeProgress * 20;
+    
+    const blur = scrollY < fadeValues.start ? 0 : 
+                scrollY > fadeValues.end ? 10 : 
+                fadeProgress * 10;
+
+    return {
+      x: progress * finalX,
+      y: progress * finalY + floatY,
+      opacity,
+      filter: `blur(${blur}px)`
+    };
+  }, [scrollY, alignSide, fadeValues]);
 
   const transform = getTransform();
 
   return (
     <motion.div
       ref={productRef}
-      className={commonClasses}
+      className={cn(
+        "absolute z-10 rounded-[22px] p-[6px] bg-white/20 backdrop-blur-sm shadow-lg",
+        className
+      )}
       animate={{
         x: transform.x,
         y: transform.y,
@@ -133,9 +123,11 @@ export function AnimatedProduct({
         filter: transform.filter
       }}
       style={{
-        ...commonStyles,
+        width: `${width}px`,
+        height: `${height}px`,
         rotate: rotation
       }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
       <div className="w-full h-full overflow-hidden rounded-[16px] bg-[#351B56]/50">
         <Image
