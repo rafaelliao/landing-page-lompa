@@ -7,7 +7,7 @@
 6 silly config load:file:C:\Users\rafae\AppData\Roaming\npm\etc\npmrc
 7 verbose title npm exec next dev --port 3000
 8 verbose argv "exec" "--" "next" "dev" "--port" "3000"
-9 verbose logfile logs-max:10 dir:C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.npm\_logs\2025-04-16T04_16_46_842Z-
-10 verbose logfile C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.npm\_logs\2025-04-16T04_16_46_842Z-debug-0.log
+9 verbose logfile logs-max:10 dir:C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.npm\_logs\2025-04-16T14_38_48_111Z-
+10 verbose logfile C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.npm\_logs\2025-04-16T14_38_48_111Z-debug-0.log
 11 silly logfile start cleaning logs, removing 1 files
 12 silly logfile done cleaning log files

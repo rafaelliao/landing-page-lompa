@@ -10,7 +10,7 @@ export function FloatingProducts() {
   };
 
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
       <div className="relative w-full h-full">
         {/* Left side product images - Mobile & Desktop */}
         <AnimatedProduct

@@ -1,34 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ClientCookieConsent from "@/components/client-cookie-consent";
+import CookieBanner from "@/components/cookie-consent-new";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lompa - O marketplace do futuro, mais social, acessível e interativo!",
-  description: "O marketplace mais social, acessível e interativo!",
-  icons: {
-    icon: [
-      {
-        url: "/images/logo-lompa-fundo.png",
-        sizes: "32x32",
-        type: "image/png",
-      },
-      {
-        url: "/images/logo-lompa-fundo.png",
-        sizes: "16x16",
-        type: "image/png",
-      },
-    ],
-    apple: [
-      {
-        url: "/images/logo-lompa-fundo.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
-    ],
-  },
+  title: "Lompa - Landing Page",
+  description: "Landing Page da Lompa",
 };
 
 export default function RootLayout({
@@ -38,9 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
-        {children}
-        <ClientCookieConsent />
+      <body className={`${inter.className} relative`}>
+        <div className="relative z-10">
+          {children}
+        </div>
+        <CookieBanner />
       </body>
     </html>
   );
