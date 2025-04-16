@@ -9,8 +9,14 @@ export function ScrollIndicator() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Esconde a seta quando a página é rolada para baixo
-      if (window.scrollY > window.innerHeight * 0.5) {
+      // Calcula a posição atual do scroll em relação ao final da página
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollEnd = documentHeight - windowHeight;
+
+      // Esconde a seta apenas quando chegar ao final da página
+      if (scrollPosition >= scrollEnd - 100) { // 100px de margem antes do final
         setIsVisible(false);
       } else {
         setIsVisible(true);
@@ -32,9 +38,14 @@ export function ScrollIndicator() {
 
   return (
     <motion.div
-      className="fixed left-1/2 transform -translate-x-1/2 text-white/80 cursor-pointer z-50"
+      className="fixed text-white/80 cursor-pointer z-50"
       style={{
-        bottom: '10%'
+        bottom: '10%',
+        left: 'calc(50% - 185px)', // Centraliza em relação ao card de 370px
+        width: '370px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}
       initial={{ opacity: 0, y: -10 }}
       animate={{ 

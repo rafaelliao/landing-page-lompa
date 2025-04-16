@@ -91,19 +91,15 @@ export function AnimatedProduct({
                    scrollY > fadeValues.end ? 0 : 
                    1 - fadeProgress;
     
-    const floatY = scrollY < fadeValues.start ? 0 : 
-                  scrollY > fadeValues.end ? 20 : 
-                  fadeProgress * 20;
-    
     const blur = scrollY < fadeValues.start ? 0 : 
                 scrollY > fadeValues.end ? 10 : 
                 fadeProgress * 10;
 
     return {
-      x: progress * finalX,
-      y: progress * finalY + floatY,
+      x: finalX * progress,
+      y: finalY * progress,
       opacity,
-      filter: `blur(${blur}px)`
+      filter: `blur(${blur}px)`,
     };
   }, [scrollY, alignSide, fadeValues]);
 
@@ -113,31 +109,50 @@ export function AnimatedProduct({
     <motion.div
       ref={productRef}
       className={cn(
-        "absolute z-10 rounded-[22px] p-[6px] bg-white/20 backdrop-blur-sm shadow-lg",
+        "absolute z-10 rounded-[24px] p-[8px] bg-white/10 backdrop-blur-sm shadow-[0_0_20px_rgba(255,255,255,0.1)]",
         className
       )}
-      animate={{
-        x: transform.x,
-        y: transform.y,
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ 
         opacity: transform.opacity,
-        filter: transform.filter
+        scale: 1,
+        y: transform.y,
+        x: transform.x,
+        rotate: rotation,
+      }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+        y: {
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+          yoyo: Infinity,
+          from: -10,
+          to: 10
+        },
+        rotate: {
+          duration: 3,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }
       }}
       style={{
+        filter: transform.filter,
         width: `${width}px`,
         height: `${height}px`,
-        rotate: rotation
       }}
-      transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
-      <div className="w-full h-full overflow-hidden rounded-[16px] bg-[#351B56]/50">
+      <div className="w-full h-full overflow-hidden rounded-[20px] bg-[#351B56]/40">
         <Image
           src={src}
           alt="Product"
           className="w-full h-full object-cover"
-          width={width - 12}
-          height={height - 12}
-          priority={false}
-          loading="lazy"
+          width={width - 16}
+          height={height - 16}
+          priority
         />
       </div>
     </motion.div>

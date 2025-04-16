@@ -1,0 +1,13 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.npmrc
+5 silly config load:file:C:\Users\rafae\.npmrc
+6 silly config load:file:C:\Users\rafae\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm exec next dev --port 3000
+8 verbose argv "exec" "--" "next" "dev" "--port" "3000"
+9 verbose logfile logs-max:10 dir:C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.npm\_logs\2025-04-16T13_55_47_036Z-
+10 verbose logfile C:\Users\rafae\OneDrive\Desktop\Rafael\Desenvolvimento\LandingPage Lompa\.npm\_logs\2025-04-16T13_55_47_036Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
