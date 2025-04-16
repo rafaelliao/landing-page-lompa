@@ -1,0 +1,13 @@
+.git
+.gitignore
+.next
+node_modules
+.env
+.env.local
+*.log
+logs/
+scripts/
+.npm/
+.npmrc
+package-lock.json
+yarn.lock 
